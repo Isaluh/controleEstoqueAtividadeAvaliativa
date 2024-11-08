@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Controle de Estoque</title>
+</head>
+<body>
+    <main>
+        <h1>Controle de Estoque</h1>
+        <div class="lista">
+            <% if (produtos.length === 0) { %>
+                <p>Nenhum produto cadastrado no momento...</p>
+            <% } else { %>
+                <% produtos.forEach(produto => { %>
+                    <div>
+                        <ul>
+                            <li><strong>Produto:</strong> <%= produto.nome %></li>
+                            <li><strong>Preço:</strong> R$<%= produto.preco %></li>
+                            <li><strong>Quantidade:</strong> <%= produto.quantidade %></li>
+                        </ul>
+                        <div>
+                            <img src="/imgs/editar.svg" alt="Editar" width="20" class="editar" onclick="abrirEditar('<%= JSON.stringify(produto) %>')">
+                            <img src="/imgs/excluir.svg" alt="Excluir" width="20" class="excluir" onclick="abrirExcluir('<%= JSON.stringify(produto) %>')">
+                        </div>
+                    </div>
+                <% }) %>
+            <% } %>
+        </div>
+        <button class="cadastro"><img src="/imgs/mais.svg" alt="">Cadastrar</button>
+    </main>
+
+    <span class="spanCadastro hidden"></span>
+    <aside class="asideCadastro hidden">
+        <form id="produtoForm">
+            <div>
+                <label for="produto">Nome do Produto</label>
+                <input type="text" name="produto" id="produto">
+            </div>
+            <div>
+                <label for="preco">Preço do Produto</label>
+                <input type="number" name="preco" id="preco">
+            </div>
+            <div>
+                <label for="qnt">Quantidade no Estoque</label>
+                <input type="number" name="qnt" id="qnt">
+            </div>
+        </form>
+        <div>
+            <button type="button" class="aside cancelar">Cancelar</button>
+            <button type="submit" class="aside">Cadastrar</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
