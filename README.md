@@ -29,9 +29,9 @@ Descrição do projeto, como foi feito/com quem, doq c trata e papapa<br/>
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- Spring Boot
+- Spring Boot e Lombok
 - Java
-- HTML e CSS
+- HTML/EJS e CSS
 - JavaScript
 - Git e Github
 
