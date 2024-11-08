@@ -20,7 +20,7 @@ Descrição do projeto, como foi feito/com quem, doq c trata e papapa<br/>
   <!-- Link para download do vídeo -->
   <br>
   <img src="software.jpg"></img>
-  <a href="https://github.com/usuario/repo/raw/main/software.mp4" download="software.mp4">
+  <a href="https://github.com/Isaluh/controleEstoqueAtividadeAvaliativa/blob/main/software.mp4?download" download="software.mp4">
     Baixar vídeo
   </a>
 </p>
