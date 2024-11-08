@@ -12,9 +12,17 @@ Descrição do projeto, como foi feito/com quem, doq c trata e papapa<br/>
 <br>
 
 <p align="center">
+  <!-- Exibe o vídeo -->
   <video width="640" height="360" controls>
     <source src="software.mp4" type="video/mp4">
   </video>
+  
+  <!-- Link para download do vídeo -->
+  <br>
+  <img src="software.jpg"></img>
+  <a href="software.mp4" download="software.mp4">
+    Baixar vídeo
+  </a>
 </p>
 
 ## 🎓 Tecnologias
